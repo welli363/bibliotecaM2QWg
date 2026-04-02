@@ -10,6 +10,7 @@ const errorHandler = (err, req, res, next ) => {
         erro: err.message || "Erro interno na Biblioteca Ralph & Teddy.",
         caminho: req.url,
     });
+
 }
 
 module.exports = errorHandler;

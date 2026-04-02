@@ -5,7 +5,7 @@ const logger = ( req, res, next ) => {
 
 
 //registra entrada no postode controle
-console.log(`[BBLIOTECA] ${timestamp} | ${metodo} ${url}`);
+console.log(`[BiBLIOTECA] ${timestamp} | ${metodo} ${url}`);
 
 //CRÍTICO: chama o próximo middleware na cadeia 
 // sem esse next(), NENHUMA rota vai funcionar 
