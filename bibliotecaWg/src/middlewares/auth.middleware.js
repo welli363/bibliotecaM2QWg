@@ -4,7 +4,7 @@
 
 
 //chave de acesso temporaria - em produção, isso vem de váriavel de ambiente
-const CHAVE_ACESSO = 'biblioteca-ralph-teddy-2025'
+const CHAVE_ACESSO = 'biblioteca-ralph-teddy'
 
 const autenticar = (req, res, next) => {
     const authHeader = req.headers['authorization'];
@@ -13,7 +13,6 @@ const autenticar = (req, res, next) => {
     if (!authHeader){
         return res.status(401).json({
             erro: 'Acesso negado. Crachá de identificação não encontrado',
-            dica: 'Envie o cabeçalho: Ayhorization: Bearer <chave>'
         })
     }
 
@@ -23,7 +22,6 @@ const autenticar = (req, res, next) => {
     if( token !== CHAVE_ACESSO){
         return res.status(403).json({
             erro: 'Acesso proibido. Crachá inválido ou vencido'
-
         });
     }
 
