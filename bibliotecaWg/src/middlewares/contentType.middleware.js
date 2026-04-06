@@ -1,7 +1,8 @@
 const contentTypeMiddleware = (req, res, next) => {
+    
     const contentType = req.headers['content-type']
 
-    if(!contentType || !comtemt.includes('application/json')){
+    if(!contentType || !content.includes('application/json')){
         return res.status(415).json({
             erro: 'Tipo de mídia não suportado. Use application/json.'
         })
@@ -10,3 +11,5 @@ const contentTypeMiddleware = (req, res, next) => {
     next();
 
 }
+
+module.exports = contentTypeMiddleware

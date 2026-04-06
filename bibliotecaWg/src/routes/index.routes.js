@@ -3,6 +3,7 @@ const router = express.Router();
 const livrosRoutes = require('./livros.routes');
 const usuariosRoutes = require('./usuarios.routes');
 const autenticar = require('../middlewares/auth.middleware')
+const contentType = require('../middlewares/contentType.middleware')
 
 
 // 2. Rota Raiz
@@ -12,6 +13,7 @@ router.get('/', (req, res) => {
 
 
 router.use(autenticar);
+router.use(contentType)
 
 
 //rota de recursos 
